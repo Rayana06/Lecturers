@@ -1,0 +1,112 @@
+/* Базовые настройки страницы */
+body {
+    background-color: #2c3e50; /* Глубокий серо-синий фон */
+    color: #ecf0f1;           /* Мягкий белый (светло-серый) */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Выделение текста в цели ЛР */
+mark {
+    background-color: #34495e;
+    color: #3498db;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Окно результата */
+.result {
+    width: 280px;
+    height: 80px;
+    background: #34495e;      /* Матовый темный */
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: right;
+    color: #bdc3c7;           /* Спокойный серебристый цвет цифр */
+    font-size: 2.5rem;
+    font-weight: 300;         /* Тонкий шрифт */
+    border-radius: 12px;
+    box-sizing: border-box;
+    border: 1px solid #455a64;
+}
+
+/* Кнопки (Квадратные со скруглением) */
+.my-btn {
+    margin: 5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    background: #3e5062;      /* Цвет обычных кнопок */
+    color: #ffffff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+/* Эффекты наведения (не слишком яркие) */
+.my-btn:hover {
+    background: #4e6277;
+    transform: translateY(-2px);
+}
+
+.my-btn:active {
+    transform: translateY(0);
+}
+
+/* Операции (синие тона вместо оранжевых) */
+.my-btn.primary {
+    background: #2980b9;
+}
+
+.my-btn.primary:hover {
+    background: #3498db;
+}
+
+/* Вспомогательные кнопки (серые) */
+.my-btn.secondary {
+    background: #7f8c8d;
+}
+
+.my-btn.secondary:hover {
+    background: #95a5a6;
+}
+
+/* Кнопка "равно" */
+.my-btn.execute {
+    width: 135px;
+    background: #27ae60;      /* Спокойный зеленый */
+}
+
+.my-btn.execute:hover {
+    background: #2ecc71;
+}
+
+/* Стили для доп. элементов */
+.ui-elements {
+    margin-top: 25px;
+    text-align: center;
+}
+
+details, select, .gh-link {
+    margin: 10px 0;
+    color: #bdc3c7;
+    font-size: 0.9rem;
+}
+
+.gh-link {
+    display: block;
+    text-decoration: none;
+    color: #3498db;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: #7f8c8d;
+}
