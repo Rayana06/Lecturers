@@ -1,0 +1,167 @@
+/* ИСПОЛЬЗУЕМ ТОЛЬКО ПЕРЕМЕННЫЕ ИЗ КОДА САЙТА BMSTU */
+:root {
+    --primary-500: #006cdc;      /* Фирменный синий (Хедер и Равно) */
+    --primary-600: #004e9f;      /* Темно-синий для ховера */
+    --primary-50: #f5faff;       /* Светло-голубой (Кнопки С, %, СТВ) */
+    --primary-100: #e1effb;      /* Фон активных элементов */
+    --gray-100: #f8f9fa;         /* Светло-серый (ФОН ЦИФР и вывода) */
+    --gray-200: #e7e7e7;         /* Границы кнопок */
+    --gray-500: #484847;         /* Цвет текста цифр */
+    --gray-600: #303030;         /* Темный текст результата */
+    --font-family: "ALS Sector", arial, helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #ffffff; 
+    color: var(--gray-500);
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Хедер LKS */
+.lks-header {
+    width: 100%;
+    height: 65px;
+    background-color: var(--primary-500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.main-wrapper {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Карточка калькулятора */
+.calc-card {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid var(--gray-200);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+/* Окно вывода - светло-серый блок */
+.result { 
+    width: 232px;
+    height: 64px;
+    margin-bottom: 20px;
+    background: var(--gray-100);
+    border: 1px solid var(--gray-200);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 16px;
+    font-size: 1.8rem;
+    color: var(--gray-600);
+    box-sizing: border-box;
+    font-weight: 300;
+}
+/* ЛОГИКА ТЕМНОЙ ТЕМЫ */
+body.dark-mode {
+    background-color: #1a1a19; /* Темный фон страницы */
+    color: #ffffff;
+}
+
+body.dark-mode .calc-card {
+    background-color: #2d2d2d;
+    border-color: #444;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .result {
+    background-color: #111111;
+    border-color: #444;
+    color: #ffffff;
+}
+
+/* Цифры в темной теме */
+body.dark-mode .my-btn {
+    background-color: #3d3d3d;
+    border-color: #555;
+    color: #ffffff;
+}
+
+body.dark-mode .my-btn:hover {
+    background-color: #4d4d4d;
+}
+
+/* Вспомогательные кнопки в темной теме */
+body.dark-mode .my-btn.secondary {
+    background-color: #004e9f; /* Темно-синий вместо голубого */
+    color: #ffffff;
+    border: none;
+}
+
+/* Текст в инфо-блоках */
+body.dark-mode .task-info h1, 
+body.dark-mode .author-info {
+    color: #ccc;
+}
+
+/* КНОПКИ ЦИФР — Твоя идея: светло-серые */
+.my-btn { 
+    margin: 4px;
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    border: 1px solid var(--gray-200);
+    background: var(--gray-100); /* Светло-серый фон из кода сайта */
+    color: var(--gray-500);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.my-btn:hover { 
+    background: var(--gray-200); /* Чуть темнее при наведении */
+}
+
+/* Операции и РАВНО — Синие */
+.my-btn.primary, .my-btn.execute { 
+    background: var(--primary-500);
+    color: #ffffff;
+    border: none;
+}
+
+.my-btn.primary:hover, .my-btn.execute:hover {
+    background: var(--primary-600);
+}
+
+/* Функциональные кнопки (C, СТВ, %) — Голубые */
+.my-btn.secondary {
+    background: var(--primary-50);
+    color: var(--primary-500);
+    border: 1px solid var(--primary-100);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.my-btn.secondary:hover { 
+    background: var(--primary-100); 
+}
+
+.my-btn.execute { width: 108px; }
+
+/* Подписи */
+.task-info h1 { font-size: 1.3rem; color: var(--gray-600); margin-bottom: 8px; text-align: center; }
+.task-info p { font-size: 0.9rem; margin-bottom: 20px; text-align: center; color: var(--gray-500); }
+mark { background-color: var(--primary-50); color: var(--primary-500); padding: 2px 4px; border-radius: 4px; }
